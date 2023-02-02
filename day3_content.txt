@@ -1,0 +1,85 @@
+ DAY-3:
+
+LIST:-
+
+ L=[1,4,7.4,"div"]
+ L
+ [1, 4, 7.4, 'div']
+ L[3]
+ 'moni'
+ L[2:3]
+ [7.4]
+ L[::2]
+ [1, 7.4]
+ L[2:4]
+ [7.4, 'div']
+ L[0:]
+ [1, 4, 7.4, 'div']
+ L[3:]
+ ['div']
+ L[::-1]
+ ['div', 7.4, 4, 1]
+
+FUNCTIONS OF A LIST:-
+
+1.Append():add  an element to the end of the list.
+2.EXTEND():add all elements of a list to another list.
+3.INSERT():insert an item at the defined index.
+4.REMOVE():removes an item from the list.
+5.POP():removes and returns an element at the given index.
+6.CLEAR():removes all the items from the list.
+7.INDEX():returns the index of the elements.
+8.COUNT():returns the number of elements in the list.
+9.SORT():sorts item in ascending order.
+10.REVERSE():reverse the order of the list.
+11.COPY():returns a shallow copy of the list.
+
+Questions:
+1.create a list with 10 elements and print one by one.
+2.create a list with 5 float number find and display sum and average of list.
+3.after creating a list with 6 elements from the user extract only even numbers and print
+
+SET:-
+
+s1={1,2,3}
+s2={4,5,6,1,2}
+s1|s2 =union ; returns ={1,2,3,4,5,6}
+s1&s2=intersection; returns={1,2}
+s1-s2 and s2-s1 =difference ; returns={3} and {4,5,6}
+
+symmetric difference :
+it removes common elements and returns the uncommon elements
+s1={1,2,3,4,5,10}
+s2={4,1,9,2,10}
+s1^s2
+   (or)
+print(s1.symmetric_dfrnc(s2))
+
+DICT:-
+
+#dictionary
+
+dictionary contains element 2 units keys and values.
+keys must be unique.
+{1, 2, 3, 5, 6, 7}
+d={1:"one",2:"two"}
+         
+d
+         
+{1: 'one', 2: 'two'}
+type(d)
+         
+<class 'dict'>
+d.keys()
+         
+dict_keys([1, 2])
+d.values()
+         
+dict_values(['one', 'two'])
+d.items()
+         
+dict_items([(1, 'one'), (2, 'two')])
+
+
+
+ 
