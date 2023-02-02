@@ -1,0 +1,41 @@
+DAY-4:
+
+Mutable vs Immutable:-
+
+Mutable- it can be changed after creation
+Immutable-it can't be changed after creation
+mutable: list,set,dict
+immutable:string,int,float,bool,tuple
+
+
+String Methods:
+
+All string methods returns new values. They do not change the original string  
+
+upper()	 : Converts a string into upper case
+
+lower()	 : Converts a string into lower case or  #casefold()
+
+capitalize()	 : Converts the first character to upper case
+
+strip() : Returns a trimmed version of the string
+
+split() : Splits the string at the specified separator
+
+center() : Returns a centered string
+
+replace() : Returns a string where a specified value is replaced with a specified value
+
+count() : Returns the number of times a specified value occurs in a string
+
+endswith()	 : Returns true if the string ends with the specified value
+
+max() : Returns maximum value
+
+min() :Returns minimum value
+
+find() : Searches the string for a specified value and returns the position of where it was found
+
+startswith() : Returns true if the string starts with the specified value
+
+
