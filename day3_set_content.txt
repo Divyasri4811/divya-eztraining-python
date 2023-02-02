@@ -1,0 +1,13 @@
+s1={1,2,3}
+s2={4,5,6,1,2}
+s1|s2 =union ; returns ={1,2,3,4,5,6}
+s1&s2=intersection; returns={1,2}
+s1-s2 and s2-s1 =difference ; returns={3} and {4,5,6}
+
+symmetric difference :
+it removes common elements and returns the uncommon elements
+s1={1,2,3,4,5,10}
+s2={4,1,9,2,10}
+s1^s2
+   (or)
+print(s1.symmetric_dfrnc(s2))

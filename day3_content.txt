@@ -1,0 +1,11 @@
+append()=adds element at the end of the list
+extend()=adds more than one element to the given list
+insert()=inserts an element at defined index (ex:insert(1,22))
+remove()=removes an item from the list
+pop()=removes an element at the given index
+clear()=clears the list
+index()=returns the index of the 1st matched item
+count()=returns the count of the num(ex:a.count(4):3))-[1,4,2,4,4,5]
+sort()=sorts in an acsending order
+reverse()=reverse the order of the list
+copy()=returns the copy of the list
