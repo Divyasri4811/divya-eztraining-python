@@ -1,0 +1,28 @@
+Random Functions:
+
+
+r.sample()
+r.choices()
+r.shuffle()
+r.randint()
+r.random()
+r.unifrom()
+
+
+FUNCTIONS:
+
+CLASSIFICATIONS:
+1.PREDEFINED
+2.USER DEFINED
+
+For code reusablility we use functions.Lets say we have to use a particular concept multiple times in your program instead
+of writing the same code multiple times we can write it once include that inside a function and can call the function whereever we need it.
+
+TYPES:
+1functions without arguments and without return value
+2.functions without arguments and with return value
+3.functions with arguments and with return value
+4.functions with arguments and without return value
+
+Recursive function :
+#It is a function which calls itself.

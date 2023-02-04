@@ -1,0 +1,336 @@
+Random Functions:
+
+import random as r
+x="i am Divya"
+print(r.sample(x,2))
+
+#it gives different output each time
+
+a=[1,2,3,4,5,6]
+r.shuffle(a)
+print(a)
+
+printing random number in a:
+
+a=[1,2,3,4,5,6]
+print(r.choice(a))
+
+b="hello"
+print(r.choice(b))
+
+#printing a value in between 0.0 to 1.0
+a=r.random()
+print(a)
+
+print(r.randint(20,30))
+
+#prints no of repeated character till k gets satisfied
+b="hello"
+print(r.choices(b,k=10))
+
+#returns any random number
+#between the range incules range and float values
+print(r.uniform(5,10))
+
+#to find out all the functions in modules
+z=dir(r)
+print(z)
+
+output:
+
+['h', ' ']
+[6, 4, 5, 2, 1, 3]
+6
+h
+0.5155523401115504
+26
+['l', 'l', 'l', 'o', 'l', 'l', 'e', 'e', 'h', 'h']
+6.428802274820621
+['BPF', 'LOG4', 'NV_MAGICCONST', 'RECIP_BPF', 'Random', 'SG_MAGICCONST', 'SystemRandom', 'TWOPI', '_ONE', '_Sequence', '_Set', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_accumulate', '_acos', '_bisect', '_ceil', '_cos', '_e', '_exp', '_floor', '_index', '_inst', '_isfinite', '_log', '_os', '_pi', '_random', '_repeat', '_sha512', '_sin', '_sqrt', '_test', '_test_generator', '_urandom', '_warn', 'betavariate', 'choice', 'choices', 'expovariate', 'gammavariate', 'gauss', 'getrandbits', 'getstate', 'lognormvariate', 'normalvariate', 'paretovariate', 'randbytes', 'randint', 'random', 'randrange', 'sample', 'seed', 'setstate', 'shuffle', 'triangular', 'uniform', 'vonmisesvariate', 'weibullvariate']
+
+--------------------------------------------------------------------------------------------------
+
+#display whole calendar
+
+import calendar
+print("Full Calendar")
+print(calendar.calendar(2022))
+
+print("Particular Month")
+print(calendar.month(2023,4))
+
+print("Set first day of the week")
+calendar.setfirstweekday(calendar.SUNDAY)
+print(calendar.month(2023,21))
+
+----------------------------------------------------------------------------------------------
+
+#display date time
+
+import datetime
+a=datetime.datetime.now()
+print(a)
+fv=a.strftime("%Y")
+sv=a.strftime("%y")
+print("full version",fv)
+print("short version",sv)
+
+
+
+2023-02-03 10:13:37.266964
+full version 2023
+short version 23
+
+--------------------------------------------------------------------------------------------
+#without argument without return 
+def sample():
+    print("great day")
+    print("happy time")
+sample()
+sample()
+print("today") 
+
+output:
+
+great day
+happy time
+great day
+happy time
+today
+ 
+ 
+#muxof3nums:
+#without argument without return 
+def mux():
+    n1=int(input("enter:"))
+    n2=int(input("enter:"))
+    n3=int(input("enter:"))
+    product=(n1*n2*n3)
+    print(product)
+mux()  
+
+output:
+
+enter:2
+enter:3
+enter:4
+24
+                 
+#without argument with return value
+def mux():
+    n1=int(input("enter:"))
+    n2=int(input("enter:"))
+    n3=int(input("enter:"))
+    product=(n1*n2*n3)
+    return product
+rel=mux()
+print(rel)
+                 
+outptut:
+
+enter:3
+enter:6
+enter:7
+126
+
+
+#with argument without return value
+
+def mux(n1,n2,n3):
+    product=n1*n2*n3
+    print(product)
+mux(7,8,9)          
+
+o/p:
+504
+
+#method2
+def mux(a,b,c):
+    prod=a*b*c
+    print(prod)
+n1=int(input("enter:"))
+n2=int(input("enter:"))
+n3=int(input("enter:"))
+mux(n1,n2,n3) 
+
+o/p:
+enter:1
+enter:2
+enter:3
+6
+
+#with argument with return value
+#static inputs
+def mux(n1,n2,n3):
+    product=n1*n2*n3
+    return product
+rel=mux(1,2,3)
+print(rel)
+
+              
+o/p:
+6
+
+#user input
+def mux(n1,n2,n3):
+    product=n1*n2*n3
+    return product
+n1=int(input("enter:"))
+n2=int(input("enter:"))
+n3=int(input("enter:"))
+rel=mux(n1,n2,n3)
+print(rel)
+
+o/p:
+enter:3
+enter:4
+enter:5
+60
+------------------------------------------------------------------------------------------
+
+#multiplicable table by user input type3
+def mux(n):
+   
+    for i in range(1,11):
+        print(i ,"*" ,n ,"=",i*n)
+    
+
+n=int(input("enter:"))       
+mux(n)
+
+--------------------------------------------------------------------------------------------
+
+#
+def digits(n):
+    s=0
+    while n!=0:
+        i=n%10
+        s=s+i
+        n=n//10
+    return s
+n=int(input("enter"))
+rel=digits(n)
+print(rel)
+ 
+o/p:
+enter1234
+10
+
+-----------------------------------------------------------------------------------------
+ 
+ def factors(n):
+    count=0
+    for i in range(1,n+1):
+        if n%i==0:
+            count+=1
+            print(i)
+n=int(input("enter"))            
+factors(n)   
+
+o/p:
+enter12
+1
+2
+3
+4
+6
+12
+
+----------------------------------------------------------------------------------------         
+          
+#lemons using functions type 1
+def lemon():
+    n=int(input("enter the count of lemons:"))
+    print(n)
+    lemons=21-n
+    if n==21:
+        print("sufficent")
+    elif n>21:
+        print("left lemons:",n-21)
+    else:
+        print("need more:",lemons)
+lemon()    
+
+o/p:
+enter the count of lemons:34
+34
+left lemons: 13
+
+----------------------------------------------------------------------------------------
+
+#Recursive function
+def display():
+    n=int(input("enter the number"))
+    if n==1:
+        display()
+    else:
+        print("over")
+display()        
+
+o/p:
+enter the number2
+over
+
+-------------------------------------------------------------------------------------------
+  #Recursive function for factorial
+
+#recursive function
+def fact(n):
+    if n==0:
+        return 1
+    return n*fact(n-1)
+result=fact(5)
+print(result)
+
+o/p:
+120
+
+--------------------------------------------------------------------------------------------
+n=int(input("enter number:"))
+a=0
+b=1
+sum=0
+count=1
+while(count<=n):
+    print(sum,end=" ")
+    count+=1
+    a=b
+    b=sum
+    sum=a+b 
+o/p:
+enter number:4
+0 1 1 2 
+
+---------------------------------------------------------------------------------------------
+    
+#Function returns more values
+#Addition & subraction of 2 numbers in one function
+def add_sub(x,y):
+    sub=x-y
+    add=x+y
+    return sub,add
+res1,res2=add_sub(20,30)
+print(res1)
+print(res2)
+
+o/p:
+-10
+50
+
+-------------------------------------------------------------------------------------------
+
+#variable length method
+def sum(*a):
+    c=0
+    for i in a:
+        c=c+i
+        print(c)
+sum(12,3,5,7,9)
+
+o/p:
+12
+15
+20
+27
+36
+------------------------------------------------------------------------------------------
