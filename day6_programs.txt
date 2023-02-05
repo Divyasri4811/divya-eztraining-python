@@ -1,0 +1,108 @@
+#Exception handling:
+
+a=100
+b=10
+
+try: #u rtelling this may have error
+    print(a/b)
+
+#except exception: #u saying if error there i handle
+#print("can't divide any number by zero")
+
+except Exception as e:
+    print("please note,number can't be divided by zero",e) #this will print error also
+
+#to check ur prgrm execution goes till end or get error
+print("done")
+  
+#ex-2:
+  
+a=10
+b=2
+
+try:
+    print("resource open")
+    print(a/b)
+
+except Exception as e:
+    print("Don't give second number as zero")
+
+finally:
+    print("Resource closed")
+
+#raise used to interrupt nrml prgm flow and raise exception
+#ex-1:
+
+x=100
+if x%2!=0:
+    raise Exception("x should be even")
+else:
+    print("x is even number...correct")
+
+#employee ex:
+
+    class Employee:
+    def __init__(self,name,id):
+        self.id=id
+        self.name=name
+    def display(self):
+        print("ID: %d \nName: %s" %(self.id,self.name))
+
+emp1=Employee("Divya",101)
+emp2=Employee("Venu",102)
+emp1.display()
+emp2.display()
+
+#config:
+
+class computer:
+    def config(self):
+        print("Yes")
+
+lenovo=computer()  #object1
+lenovo.config()
+
+dell=computer()    #object2
+dell.config()
+
+#specific_errors:
+
+#like specialised doctors
+#for those specific error only those exception
+#blocks will get executed
+
+a=10
+try:
+    b=int(input("enter the number:"))
+    print("resource open")
+    print(a/b)
+except ZeroDivisionError as e:
+    print("pls note,second number can't be zero",e)
+except ValueError as e:
+    print("invalid input",e)
+except Exception as e:  #if not any above errors
+    print("other error",e)
+finally:
+    print("resource closed")
+
+#var in cls method:
+
+#variables and var.access in class and method
+class computer():
+    a=10
+    b=20
+    print("Class variable inside class",a)
+
+    def config(self): #config is a function
+        c=100
+        print("YES")
+        print("Instance access",self.b)
+
+lenovo=computer()  #object1
+print(lenovo.a)
+print(lenovo.a+lenovo.b)
+dell=computer()
+print("dell",dell.a)
+lenovo.config()
+
+
