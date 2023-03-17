@@ -1,0 +1,388 @@
+#while creating ll we goona do it in ascending order
+#one program has multiple concepts
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class ll:
+    def __init__(self):
+        self.head=None
+    def printlist(self):
+        temp=self.head
+        if not temp:
+            print('List is empty')
+            return
+        else:
+            print('Start:',end=' ')
+        while temp:
+            print(temp.data,end='->')
+            temp=temp.next
+        print('end')
+    def insert(self,data):
+        new_node=node(data)
+         #if the linked list is empty
+        if self.head is None:
+            self.head=new_node
+        elif self.head.data>=new_node.data:
+            new_node.next=self.head
+            self.head=new_node
+        else:
+            #locate the node before the insertion
+            current=self.head
+            while current.next and new_node.data>current.next.data:
+                current=current.next
+            #insertion
+            new_node.next=current.next
+            current.next=new_node
+    def delete(self,key):
+        #if the list is empty
+        if self.head is None:
+            print('Deletion Error:The list is empty')
+            return
+        #if the key is in head
+        if self.head.data==key:
+            self.head=self.head.next
+            return
+        #Find the position of first occurence of the
+        current=self.head
+        while current:
+            if current.data==key:
+                break
+            previous=current
+            current=current.next
+        #if the key was not found
+        if current is None:
+            print('Deletion Error:key not found')
+        else:
+            previous.next=current.next
+#__name is python special variable
+if __name__=='__main__':
+    #create an object
+    LL=ll()
+    print('')
+    #insert some nodes
+    LL.insert(13)
+    LL.insert(12)
+    LL.insert(8)
+    LL.insert(11)
+    LL.insert(10)
+
+    LL.printlist()
+    LL.delete(13)
+    LL.delete(8)
+    LL.delete(10)
+    LL.printlist()
+    
+
+#creating modules
+#function in my another file acting as module
+import fn
+fn.printing()
+
+print(__name__)
+def printing():
+    print("hello!have a nice day")
+
+#if u have lot of functions in your project u can give all definitions at one place
+#and give all function calls inside main
+#then there will be a format easy to read
+print("before function")
+def f1():
+    print("f1")
+def f2():
+    print("f2")
+def f3():
+    print("f3")
+if __name__=="__main__":
+    f1()
+    f2()
+    f3()
+print("name:",__name__)
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.previous=None
+        self.next=None
+
+class dll:
+    def __init__(self):
+        self.head=None
+
+    def display(self):
+        if self.head is None:
+            print("empty")
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,"<-->",end="")
+                temp=temp.next
+l=dll()
+n1=node(100)
+l.head=n1
+n2=node(200)
+n2.prev=n1
+n1.next=n2
+l.display()
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.previous=None
+        self.next=None
+
+
+
+class dll:
+    def __init__(self):
+        self.head=None
+        
+
+    def insert_start(self):
+        n=node(300)
+        temp=self.head
+        temp.prev=n
+        n.next=temp
+        self.head=n
+    def display(self):
+        if self.head is None:
+            print("empty")
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,"<-->",end=" ")
+                temp=temp.next
+l=dll()
+n1=node(100)
+l.head=n1
+n2=node(200)
+n2.prev=n1
+n1.next=n2
+l.insert_start()
+l.display()
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.previous=None
+        self.next=None
+
+
+
+class dll:
+    def __init__(self):
+        self.head=None
+        
+
+    def insert_pos(self,pos):
+        n=node(300)
+        temp=self.head
+        for i in range(1,pos-1):
+            temp=temp.next
+        n.prev=temp
+        n.next=temp.next
+        temp.next.prev=n
+        temp.next=n
+    def display(self):
+        if self.head is None:
+            print("empty")
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,"<-->",end=" ")
+                temp=temp.next
+l=dll()
+n1=node(100)
+l.head=n1
+n2=node(200)
+n2.prev=n1
+n1.next=n2
+l.insert_pos(2)
+l.display()
+
+class node:
+    def _init_(self,data):
+        self.data=data
+        self.previous=None
+        self.next=None
+class dll:
+    def _init_(self):
+        self.head=None
+    def insert_end(self):
+        n=node(300)
+        temp=self.head
+        while temp.next is not None:
+            temp=temp.next
+        temp.next=n
+        n.prev=temp
+    def display(self):
+        if self.head is None:
+            print("Empty")
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,"<-->",end=" ")
+                temp=temp.next
+
+l=dll()
+n1=node(100)
+l.head=n1
+n2=node(200)
+n2.prev=n1
+n1.next=n2
+l.insert_end()
+l.display()
+
+delete at beginning
+
+class node:
+    def _init_(self,data):
+        self.data=data
+        self.previous=None
+        self.next=None
+class dll:
+    def _init_(self):
+        self.head=None
+    def delete_begining(self):
+        temp=self.head
+        self.head=temp.next
+        temp.next=None
+    def display(self):
+        if self.head is None:
+            print("Empty")
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,"<-->",end=" ")
+                temp=temp.next
+
+l=dll()
+n1=node(100)
+l.head=n1
+n2=node(200)
+n2.prev=n1
+n1.next=n2
+l.delete_begining()
+l.display()
+
+
+delete at end
+class node:
+    def _init_(self,data):
+        self.data=data
+        self.previous=None
+        self.next=None
+class dll:
+    def _init_(self):
+        self.head=None
+    def delete_end(self):
+        temp=self.head.next
+        prev=self.head
+        while temp.next is not None:
+            temp=temp.next
+            prev=prev.next
+        prev.next=None
+    def display(self):
+        if self.head is None:
+            print("Empty")
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,"<-->",end=" ")
+                temp=temp.next
+
+l=dll()
+n1=node(100)
+l.head=n1
+n2=node(200)
+n2.prev=n1
+n1.next=n2
+l.delete_end()
+l.display()
+
+delete from position
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.previous=None
+        self.next=None
+
+
+
+class dll:
+    def __init__(self):
+        self.head=None
+        
+
+    def delete_pos(self,pos):
+        temp=self.head.next
+        prev=self.head
+        
+        for i in range(1,pos-1):
+            temp=temp.next
+        prev.prev=next
+        prev.next=temp.next
+        temp.next=None
+    def display(self):
+        if self.head is None:
+            print("empty")
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,"<-->",end=" ")
+                temp=temp.next
+l=dll()
+n1=node(100)
+l.head=n1
+n2=node(200)
+n2.prev=n1
+n1.next=n2
+l.delete_pos(2)
+l.display()
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+
+class createlist:
+    def __init__(self):
+        self.head=node(None)
+        self.tail=node(None)
+        self.head.next=self.tail
+        self.tail.next=self.head
+
+#addind node at end of ll
+    def add(self,data):
+        newnode=node(data)
+        #is empty
+        if  self.head.data is None:
+            self.head=newnode
+            self.tail=newnode
+            newnode.next=self.head
+        else:
+            self.tail.next=newnode
+            self.tail=newnode
+            #it i scll so tail will point to head
+            self.tail.next=self.head
+    def display(self):
+         current=self.head
+         if self.head is None:
+             print("listis empty")
+             return
+         else:
+             print("nodes of the circular linked list:")
+             print(current.data,"-->")
+             while(current.next!=self.head):
+                 current=current.next
+                 print(current.data,"-->")
+
+class circularlinkedlist:
+    c1=createlist()
+    c1.add("s")
+    c1.add("m")
+    c1.add("i")
+    c1.add("m")
+    c1.add("l")
+    c1.add("e")
+    c1.display()

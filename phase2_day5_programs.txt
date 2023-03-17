@@ -1,0 +1,141 @@
+#binarytree creation
+class binarytreenode:
+    def __init__(self,data):
+        self.data=data
+        self.leftchild=None
+        self.rightchild=None
+
+node1=binarytreenode(50)
+node2=binarytreenode(20)
+node3=binarytreenode(45)
+node4=binarytreenode(11)
+node5=binarytreenode(15)
+node6=binarytreenode(30)
+node7=binarytreenode(78)
+
+node1.leftchild=node2
+node1.rightchild=node3
+node2.leftchild=node4
+node2.rightchild=node5
+node3.leftchild=node6
+node3.rightchild=node7
+
+print("root node is:")
+print(node1.data)
+
+print("leftt child of the node is:")
+print(node1.leftchild.data)
+
+print("right child of the node is:")
+print(node1. rightchild.data)
+
+print("node is:")
+print(node2.data)
+
+print("leftt child of the node is:")
+print(node2.leftchild.data)
+
+print("right child of the node is:")
+print(node2. rightchild.data)
+
+print("node is:")
+print(node3.data)
+
+print("leftt child of the node is:")
+print(node3.leftchild.data)
+
+print("right child of the node is:")
+print(node3. rightchild.data)
+
+class node:
+    def __init__(self,key):
+        self.left=None
+        self.right=None
+        self.val=key
+
+def printinorder(root):
+    if root:
+        #first recur on left child
+        printinorder(root.left)
+        #then print the data of mode
+        print(root.val,end=""),
+        #now recur on right child
+        printinorder(root.right)
+
+def printpostorder(root):
+    if root:
+        #first recur on left child
+        printpostorder(root.left)
+        #the recur on right child
+        printpostorder(root.right)
+        #now print the data of node
+        print(root.val,end="")
+
+def printpreorder(root):
+    if root:
+        #first print data of node
+        print(root.val,end="")
+        #then recur on left child
+        printpreorder(root.left)
+        #finally recur on right child
+        printpreorder(root.right)
+
+root=node(1)
+root.left=node(2)
+root.right=node(3)
+root.left.left=node(4)
+root.left.right=node(5)
+print("PRE-ORDER:")
+printpreorder(root)
+print()
+print("IN-ORDER:")
+printinorder(root)
+print()
+print("POST-ORDER:")
+printpostorder(root)
+print()
+
+
+#BST-INSERT
+class node:
+    def __init__(self,key):
+        self.left=None
+        self.right=None
+        self.val=key
+
+#a new node with given key
+def insert(root,key):
+    if root is None:
+        return node(key)
+    else:
+        if root.val==key:
+            return root
+        elif root.val<key:
+            root.right=insert(root.right,key)
+        else:
+            root.left=insert(root.left,key)
+        return root
+
+#inorder-traversal
+
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.val)
+        inorder(root.right)
+
+r=node(50)
+r=insert(r,30)
+r=insert(r,20)
+r=insert(r,40)
+r=insert(r,50)
+r=insert(r,60)
+r=insert(r,70)
+r=insert(r,80)
+inorder(r)
+
+"""   50
+     /  \
+    30   70
+   /  \  / \
+  20 40 60  80"""
